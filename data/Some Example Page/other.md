@@ -1,0 +1,1 @@
+# This file is shown in the "Some Example Page" directory, with the name "other"
