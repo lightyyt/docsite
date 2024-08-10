@@ -97,11 +97,11 @@ function make_tree_view(){
                 document.getElementById('content').innerHTML = marked.parse("<?php echo($output); ?>");
             </script>
             <?php
-                if(file_exists("$folder/_footer.md")){
+                if(file_exists("$folder/$footer.md")){
                     //More String Cleanup for the Footer
-                    $f_before = str_replace("\n","\\n", file_get_contents($folder."/_footer.md"));
-                    $footer = str_replace('"', '\"', $f_before);
-                    echo("<script>document.getElementById('footer').innerHTML = marked.parse(\"".$footer."\");</script>");
+                    $f_before = str_replace("\n","\\n", file_get_contents("$folder/$footer.md"));
+                    $f = str_replace('"', '\"', $f_before);
+                    echo("<script>document.getElementById('footer').innerHTML = marked.parse(\"".$f."\");</script>");
                 }
             ?>
         </div>
